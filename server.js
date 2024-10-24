@@ -13,7 +13,7 @@ const port = 3001;
 // Clave secreta para el Token
 const JWT_SECRET = 'virtuallife-sessions';
 
-const allowedOrigins = ['https://virtuallifefrontend-i89drtq9q-juan-frans-projects.vercel.app'];
+const allowedOrigins = ['virtuallifefrontend-r0aeq6a26-juan-frans-projects.vercel.app'];
 
 // Llamamos a cors
 app.use(cors({
