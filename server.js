@@ -50,6 +50,10 @@ db.connect((err) => {
     console.log('Conectado a DB correctamente');
 });
 
+app.get('/', (req, res) => {
+  res.send('API de Virtual Life está funcionando');
+});
+
 // Obtencion de los productos que iran a nuestro Hero
 app.get('/api/heroProductos', (req, res) => {
   // Consulta para obtener los productos
