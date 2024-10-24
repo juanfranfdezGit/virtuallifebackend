@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const app = express();
 // Seleccionamos el puerto
-const port = 3001;
+const port = 80;
 // Clave secreta para el Token
 const JWT_SECRET = 'virtuallife-sessions';
 
@@ -359,6 +359,6 @@ function verifyToken(req, res, next) {
 
 // Iniciamos la sesion en el puesto indicado anteriormente
 app.listen(port, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${port}`);
+  console.log(`Servidor ejecutándose en ${port}`);
 });
 
