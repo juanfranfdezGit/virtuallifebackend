@@ -16,12 +16,19 @@ const JWT_SECRET = 'virtuallife-sessions';
 const allowedOrigins = ['https://virtuallifefrontend.vercel.app'];
 
 // Llamamos a cors
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-  credentials: true, 
-  exposedHeaders: ['Authorization'],
-}));
+// app.use(cors({
+//   origin: allowedOrigins,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+//   credentials: true, 
+//   exposedHeaders: ['Authorization'],
+// }));
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // Permitir todos los orígenes (solo para pruebas)
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  next();
+});
+
 // Para recibir JSON
 app.use(express.json());
 
@@ -37,7 +44,7 @@ const db = mysql.createConnection({
     user: 'sql7740439',     
     password: 'neUrAuScaV',
     database: 'sql7740439'  
-  });
+});
 
 // Conexion a la base de datos
 db.connect((err) => {
@@ -48,10 +55,6 @@ db.connect((err) => {
     }
     // Mensaje en caso de exito
     console.log('Conectado a DB correctamente');
-});
-
-app.get('/', (req, res) => {
-  res.send('API de Virtual Life está funcionando');
 });
 
 // Obtencion de los productos que iran a nuestro Hero
