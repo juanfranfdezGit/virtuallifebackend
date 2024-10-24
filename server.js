@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const app = express();
 // Seleccionamos el puerto
-const port = 80;
+const port = 3000;
 // Clave secreta para el Token
 const JWT_SECRET = 'virtuallife-sessions';
 
@@ -37,9 +37,9 @@ db.connect((err) => {
     console.log('Conectado a DB correctamente');
 });
 
-// app.get('/', (req, res) => {
-//   res.status(200).send('OK');
-// })
+app.get('/', (req, res) => {
+  res.status(200).send('OK');
+})
 
 // Obtencion de los productos que iran a nuestro Hero
 app.get('/api/heroProductos', (req, res) => {
