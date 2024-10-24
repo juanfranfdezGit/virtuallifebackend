@@ -23,7 +23,7 @@ const db = mysql.createConnection({
     host: 'sql7.freesqldatabase.com', 
     user: 'sql7740439',     
     password: 'neUrAuScaV',
-    database: 'sql7740439'  
+    database: 'sql7740439',
 });
 
 // Conexion a la base de datos
@@ -37,9 +37,9 @@ db.connect((err) => {
     console.log('Conectado a DB correctamente');
 });
 
-app.get('/', (req, res) => {
-  res.status(200).send('OK');
-})
+// app.get('/', (req, res) => {
+//   res.status(200).send('OK');
+// })
 
 // Obtencion de los productos que iran a nuestro Hero
 app.get('/api/heroProductos', (req, res) => {
