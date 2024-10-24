@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const app = express();
 // Seleccionamos el puerto
-const port = 3000;
+const port = 3001;
 // Clave secreta para el Token
 const JWT_SECRET = 'virtuallife-sessions';
 
