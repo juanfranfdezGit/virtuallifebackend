@@ -16,15 +16,15 @@ const JWT_SECRET = 'virtuallife-sessions';
 const allowedOrigins = ['https://virtuallifefrontend.vercel.app'];
 
 // Llamamos a cors
-// app.use(cors({
-//   origin: allowedOrigins,
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-//   credentials: true, 
-//   exposedHeaders: ['Authorization'],
-// }));
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  credentials: true, 
+  exposedHeaders: ['Authorization'],
+}));
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Permitir todos los orígenes (solo para pruebas)
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
 });
