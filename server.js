@@ -14,7 +14,7 @@ const port = 3001;
 const JWT_SECRET = 'virtuallife-sessions';
 
 // Llamamos a cors
-app.use(cors());
+app.use(cors({origin: 'https://virtuallifefrontend.vercel.app/'}));
 // Para recibir JSON
 app.use(express.json());
 
