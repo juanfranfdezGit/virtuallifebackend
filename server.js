@@ -20,10 +20,10 @@ app.use(express.json());
 
 // Credenciales de nuestra Base de datos
 const db = mysql.createConnection({
-    host: 'sql7.freesqldatabase.com', 
-    user: 'sql7740439',     
-    password: 'neUrAuScaV',
-    database: 'sql7740439',
+    host: 'bfejnnwpscziwzdituf5-mysql.services.clever-cloud.com', 
+    user: 'ucyw95fqpblb2tzg',     
+    password: '8oaCaAGLQe5I1bQqKcwc',
+    database: 'bfejnnwpscziwzdituf5',
 });
 
 // Conexion a la base de datos
